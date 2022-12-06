@@ -2,8 +2,8 @@ fn main() {
     let mut s = String::from("ivo belitts");
 
     let first_word = first_word(&s);
-
-    s.clear();
+    // The following line will fail: we're trying to borrow s as mutable wihle it's also borrowed as immutable
+    // s.clear();
 
     println!("{}", first_word);
 }
